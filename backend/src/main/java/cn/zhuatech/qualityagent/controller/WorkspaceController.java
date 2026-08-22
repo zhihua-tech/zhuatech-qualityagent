@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.qualityagent.controller;
 import cn.zhuatech.qualityagent.agent.AgentRuntime;
 import cn.zhuatech.qualityagent.common.ApiResponse;

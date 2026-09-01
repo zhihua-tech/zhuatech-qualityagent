@@ -70,3 +70,6 @@ npm run dev:demo
 
 SEO 关键词：Quality Agent,质量智能体,CAPA AI,8D Agent,根因分析 AI,Java Vue QMS，知华科技，上海如静知华信息科技有限公司。
 
+## 企业级 CAPA 建议发布
+
+新增 `POST /api/enterprise/qualityagent/capa-recommendation-release`，覆盖不符合、遏制、根因、责任、验证、法规、有效性和审计，返回 `RELEASE / REVIEW / BLOCKED`。详见 [CAPA 发布说明](docs/ENTERPRISE_CAPA_RELEASE.md)。

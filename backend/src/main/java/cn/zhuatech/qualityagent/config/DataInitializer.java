@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.qualityagent.config;
 import cn.zhuatech.qualityagent.model.*; import cn.zhuatech.qualityagent.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder; import java.time.LocalDate; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  @Bean CommandLineRunner seed(OperatingUnitRepository units,WorkRecordRepository records,ResourceRegisterRepository resources,ReviewRecordRepository reviews,UserRepository users,PasswordEncoder encoder){return args->{if(units.count()>0)return;
   OperatingUnit first=units.save(new OperatingUnit("QA-MFG1","制造质量一组","质量管理中心",2200)),second=units.save(new OperatingUnit("QA-FINAL","成品质量组","质量管理中心",1600)),third=units.save(new OperatingUnit("QA-SUP","供应商质量组","供应链质量",1200));
   WorkRecord a=records.save(new WorkRecord("CAPA-260808-018","MAT-CTRL-A12","控制器端子压接不良改进",first,12,7,4,LocalDate.now().plusDays(2),WorkRecord.Status.RUNNING,"8D-V3")); WorkRecord b=records.save(new WorkRecord("CAPA-260808-012","PKG-LABEL-07","包装标签错贴防错改善",second,8,8,0,LocalDate.now().plusDays(0),WorkRecord.Status.COMPLETED,"8D-V2")); WorkRecord c=records.save(new WorkRecord("CAPA-260808-021","SUP-CONN-22","来料连接器尺寸波动",third,10,5,2,LocalDate.now().plusDays(3),WorkRecord.Status.RELEASED,"8D-V1"));
